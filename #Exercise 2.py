@@ -1,5 +1,5 @@
 #Exercise 2 
-import math
+from math import pi 
 
 class Circle:
 
@@ -20,5 +20,29 @@ class Circle:
         self.colour = colour 
 
     def __str__(self):
+        return ("The radius of a circle is" + str(self.getRadius()) + "and" + "the colour is " + str(self.getColour()) 
+   
+    def getArea(self)
+        return (pi**2 * self.getRadius())
+
         
+class Cylinder(Circle):
+
+    def __init__(self, height = 1.0, colour = "red"):
+        self.height = height 
+    
+    def getHeight(self):
+        return self.height
+
+    def setHeight(self):
+        self.height = height 
+    
+    def __str__(self):
+        return ("The radius of a cylinder is" + str(self.getRadius()) + ", the height is" + str(self.getHeight()) + "and the volume of the cylinder is" + str(self.getVolume())
+
+    def getVolume(self):
+        return (pi **2 * self.getHeight() * self.getRadius())
+
+    circle = Circle()
+    cylinder = Cylinder()
 
