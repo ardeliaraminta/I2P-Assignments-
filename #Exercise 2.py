@@ -1,41 +1,40 @@
-#Exercise 2 
 from math import pi 
 
-class Circle:
+class Circle():
 
-    def __init__(self, radius = 1.0, colour = "red")
-    self.radius = radius
-    self.colour = colour 
-
-    def getRadius(self):
-        return self.radius = radius 
+    def __init__(self, radius = 1.0, color = "red"):
+        self.__radius = radius
+        self.__color = color
     
-    def setRadius(self,radius):
-        self.radius = radius  
+    def getRadius(self):
+        return self.__radius
 
-    def getColour(self):
-        return self.colour
+    def setRadius(self, radius):
+        self.__radius = radius
 
-    def setColour(self, colour):
-        self.colour = colour 
+    def getColor(self):
+        return self.__color
+
+    def setColor(self, color):
+        self.__color = color
 
     def __str__(self):
-        return ("The radius of a circle is" + str(self.getRadius()) + "and" + "the colour is " + str(self.getColour()) 
-   
-    def getArea(self)
-        return (pi**2 * self.getRadius())
+        return ("The radius of a circle is " + str(self.getRadius()) + " and the color of circle is " + self.getColor())
+    
+    def getArea(self):
+        return (pi **2 * self.getRadius())
+    
 
-        
 class Cylinder(Circle):
 
     def __init__(self, height = 1.0, colour = "red"):
-        self.height = height 
+        self.__height = height 
     
     def getHeight(self):
         return self.height
 
     def setHeight(self):
-        self.height = height 
+        self.__height = height 
     
     def __str__(self):
         return ("The radius of a cylinder is" + str(self.getRadius()) + ", the height is" + str(self.getHeight()) + "and the volume of the cylinder is" + str(self.getVolume())
