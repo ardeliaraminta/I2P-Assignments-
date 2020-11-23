@@ -37,7 +37,7 @@ class Student(Person):
         return sum(self._grades) / len(self._grades)
         
     def __str__(self):
-        return "Student: " + self.getName() + '(" + self.getAddress() + ')'
+        return "Student: " + self.getName() + "(" + self.getAddress() + ")"
 
 
 class Teacher(Person):
@@ -48,7 +48,7 @@ class Teacher(Person):
         self._courses = courses 
 
     def __str__(self):
-        return "Teacher:" + self.getName() + "(" + self.getAddress() + "")"
+        return "Teacher:" + self.getName() + "(" + self.getAddress() + ")"
 
    
     def addCourse(self, courses):
