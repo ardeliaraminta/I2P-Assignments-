@@ -27,7 +27,8 @@ class Circle():
 
 class Cylinder(Circle):
 
-    def __init__(self, height = 1.0, colour = "red"):
+    def __init__(self, height = 1.0, radius = 1.0, color = "red"):
+        super().__init__(radius, colour)
         self.__height = height 
     
     def getHeight(self):
