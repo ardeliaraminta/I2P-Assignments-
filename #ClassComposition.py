@@ -5,6 +5,7 @@ class Author:
         self.email = email
         self.gender = gender 
 
+        if gender != "m" and gender != "f":
             raise TypeError("Only M or F")
 
     def getName(self):
