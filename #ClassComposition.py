@@ -1,71 +1,68 @@
 class Author:
     
     def __init__(self, name, email, gender):
-        self.name = name 
-        self.email = email
-        self.gender = gender 
+        self.__name = name 
+        self.__email = email
+        self.__gender = gender 
 
-        if gender != "m" and gender != "f":
+        if self.__gender != "M" and self.__gender != "F":
             raise TypeError("Only M or F")
 
     def getName(self):
-        return self.name 
+        return self.__name
 
     def getEmail(self):
-        return self.email
+        return self.__email
 
-    def setEmail(self):
-        self.email = email 
-    
+    def setEmail(self, email):
+        self.__email = email
+
     def getGender(self):
-        return self.gender 
+        return self.__gender
 
     def toString(self):
-        return f"Author[name={self.name},email={self.email},gender={self.gender}]"
+        return f"Author[name={self.__name},email={self.__email},gender={self.__gender}]"
 
-# author1 = Author("Ardelia", "ardeliashaula@gmail.com", "M")
-#author1.toString()
 
 class Book:
-
-    def __init__(self, name, author, price , qty = 0):
-        self.name = name 
-        self.author = author
-        self.price = price
-        self.qty = qty 
+    def __init__(self, name, author, price, qty=0):
+        self.__name = name
+        self.__author = author
+        self.__price = price
+        self.__qty = qty
 
     def getName(self):
-        return self.name 
+        return self.__name
 
     def getAuthor(self):
-        return self.authors
+        return self.__author
 
     def getPrice(self):
-        return self.price
+        return self.__price
 
-    def setPrice(self):
-        self.price = price
-    
+    def setPrice(self, price):
+        self.__price = price
+
     def getQty(self):
-        return self.qty 
-    
-    def setQty(self):
-        self.qty = qty
-    
+        return self.__qty
+
+    def setQty(self, qty):
+        self.__qty = qty
+
     def toString(self):
-        return f"Book[name={self.name},{self.author.toString()},price={self.price},qty={self.qty}]"
+        return f"Book[name={self.__name},{self.__author.toString()},price={self.__price},qty={self.__qty}]"
 
     def getAuthorName(self):
-        return self.author.getName()
+        return self.__author.getName()
 
     def getAuthorEmail(self):
-        return self.author.getEmail()
+        return self.__author.getEmail()
 
     def getAuthorGender(self):
-        return self.author.getGender()
-    
+        return self.__author.getGender()
 
 
-    
-    
-    
+poetry = Author("Lang Leav", "langleav@gmail.com", "F")
+poetry2 = Book("The Dark Between the Stars", "Atticus","50", 2)
+
+print(poetry.toString())
