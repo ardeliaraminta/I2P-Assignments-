@@ -53,7 +53,7 @@ class Book:
         self.qty = qty
     
     def toString(self):
-        return f"Book[name={self.__name},{self.__author.toString()},price={self.__price},qty={self.__qty}]"
+        return f"Book[name={self.name},{self.author.toString()},price={self.price},qty={self.qty}]"
 
     def getAuthorName(self):
         return self.author.getName()
