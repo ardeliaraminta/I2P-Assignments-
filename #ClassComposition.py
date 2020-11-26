@@ -1,12 +1,10 @@
 class Author:
-    
     def __init__(self, name, email, gender):
-        self.__name = name 
+        self.__name = name
         self.__email = email
-        self.__gender = gender 
-
-        if self.__gender != "M" and self.__gender != "F":
-            raise TypeError("Only M or F")
+        self.__gender = gender
+        if gender != "m" and gender != "f":
+            raise TypeError(" should be m or f")
 
     def getName(self):
         return self.__name
@@ -61,8 +59,9 @@ class Book:
     def getAuthorGender(self):
         return self.__author.getGender()
 
-
-poetry = Author("Lang Leav", "langleav@gmail.com", "F")
-poetry2 = Book("The Dark Between the Stars", "Atticus","50", 2)
+poetry = Author("Lang Leav", "langleav@langleav.com", "f")
+poetry2 = Book("The Dark Between the Stars", poetry ,"50", 2)
 
 print(poetry.toString())
+
+
