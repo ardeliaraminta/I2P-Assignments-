@@ -3,7 +3,7 @@ class Author:
         self.__name = name
         self.__email = email
         self.__gender = gender
-        if gender != "m" and gender != "f":
+        if self.__gender != "m" and self.__gender != "f":
             raise TypeError(" should be m or f")
 
     def getName(self):
@@ -59,7 +59,7 @@ class Book:
     def getAuthorGender(self):
         return self.__author.getGender()
 
-poetry = Author("Lang Leav", "langleav@langleav.com", "f")
+poetry = Author("Lang Leav", "langleav@langleav.com", "m")
 poetry2 = Book("The Dark Between the Stars", poetry ,"50", 2)
 
 print(poetry.toString())
