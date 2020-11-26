@@ -63,5 +63,6 @@ poetry = Author("Lang Leav", "langleav@langleav.com", "f")
 poetry2 = Book("The Dark Between the Stars", poetry ,"50", 2)
 
 print(poetry.toString())
+print(poetry2.toString())
 
 
